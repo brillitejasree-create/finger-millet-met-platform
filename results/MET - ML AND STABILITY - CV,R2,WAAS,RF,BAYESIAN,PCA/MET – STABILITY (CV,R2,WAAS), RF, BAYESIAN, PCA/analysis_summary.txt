@@ -1,0 +1,64 @@
+MULTI-ENVIRONMENT TRIAL ANALYSIS SUMMARY (NO CHECK VERSION)
+============================================================
+
+Data: 35 genotypes x 5 environments x 3 replications
+Total observations: 525 
+Reference: MEDIAN YIELD (no check variety specified)
+
+STABILITY ANALYSIS:
+  Genotypes evaluated: 35 
+  Stability classes:
+
+  High Yield - Stable High Yield - Unstable    Low Yield - Stable  Low Yield - Unstable 
+                    7                    10                    10                     8 
+
+RANDOM FOREST MODEL:
+  R2 = 0.432 
+  RMSE = 3.562 
+  Top 5 traits:
+  Feature   %IncMSE IncNodePurity
+1     TSW 10.421494     1153.1072
+2      TP 18.995240     1060.7039
+3      LW 15.931945      865.9785
+4      PH  8.871151      854.7117
+5     DFF 17.860160      848.1508
+
+PCA:
+  PC1: 29.9 %
+  PC2: 22.3 %
+  PC3: 12.8 %
+
+BAYESIAN ANALYSIS:
+  Reference: Median yield across all genotypes
+  Selected genotypes: 4 
+
+SELECTION CRITERIA (No Check):
+  1. Mean Yield > Overall mean
+  2. Bayesian Stability < Median stability
+  3. Prob(Beat Median) > 50%
+  4. Prob(Top 30%) > 30%
+
+TOP 10 SELECTED GENOTYPES:
+# A tibble: 4 × 6
+  GENOTYPE Mean_Yield Bayes_Stability Prob_Beat_Check Prob_Release Selection_Score
+  <chr>         <dbl>           <dbl>           <dbl>        <dbl>           <dbl>
+1 G29            20.1            2.89           0.98         0.864           0.722
+2 G17            19.7            2.98           0.953        0.803           0.699
+3 G24            19.0            2.76           0.884        0.611           0.669
+4 G14            18.1            2.36           0.702        0.322           0.617
+
+
+TOP 10 OVERALL (by Selection Score):
+# A tibble: 10 × 5
+   GENOTYPE Selected Mean_Yield Bayes_Stability Selection_Score
+   <chr>    <chr>         <dbl>           <dbl>           <dbl>
+ 1 G29      YES            20.1            2.89           0.722
+ 2 G17      YES            19.7            2.98           0.699
+ 3 G24      YES            19.0            2.76           0.669
+ 4 G14      YES            18.1            2.36           0.617
+ 5 G9       NO             23.6            3.12           0.784
+ 6 G26      NO             22.1            3.22           0.753
+ 7 G2       NO             23.7            3.90           0.732
+ 8 G10      NO             22.3            4.36           0.677
+ 9 G27      NO             19.3            3.31           0.651
+10 G16      NO             19.3            3.44           0.646
